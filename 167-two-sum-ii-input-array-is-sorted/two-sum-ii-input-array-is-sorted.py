@@ -12,7 +12,8 @@ class Solution(object):
             curr = nums[left - 1] + nums[right - 1]
             if curr == target :
                 return [left,right]
-            elif curr < target:
+            if curr < target:
                 left += 1
             else:
                 right -= 1
+        return []
